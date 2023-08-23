@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
-const dbName = "keepMERN";
-const localDB = `mongodb://localhost:27017/${dbName}`;
-const password = "Test123";
-const remoteDB = `mongodb+srv://admin-justin:${password}@cluster0.ekr2imi.mongodb.net/${dbName}`;
+const localDB = `mongodb://localhost:27017/${process.env.DBNAME}`;
+const remoteDB = `mongodb+srv://${process.env.MONGO_ATLAS_USERNAME}:${process.env.MONGO_ATLAS_PASSWORD}@cluster0.ekr2imi.mongodb.net/${process.env.DBNAME}`;
 
 const connectDB = () => {
   try {

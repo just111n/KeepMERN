@@ -12,7 +12,7 @@ exports.createNote = async (req, res, next) => {
   } catch (error) {
     return res.status(401).json({
       message: "Note not created",
-      error: err.message,
+      error: error.message,
     });
   }
 };

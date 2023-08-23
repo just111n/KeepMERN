@@ -57,7 +57,9 @@ describe("noteService", () => {
       await expect(noteService.readAllNotes()).rejects.toThrow(mockError);
     });
   });
+
   // ... Continue with similar tests for readAllNotes, updateNote, deleteNote
+  
   describe("deleteNote function", () => {
     afterEach(() => {
       jest.clearAllMocks(); // Clear mock data after each test
