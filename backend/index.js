@@ -4,13 +4,14 @@ const noteRouter = require("./api/note/router");
 
 const connectDB = require("./db");
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
+app.use(cors());
 
-const { createNote } = require("./services/noteService");
 
 app.get("/", (req, res) => res.send("Hello World!"));
 
