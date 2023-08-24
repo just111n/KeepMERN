@@ -3,7 +3,7 @@ import axios from "axios";
 export const createNote = async (newNote) => {
   try {
     const response = await axios.post(
-      `http://localhost:5000/api/note/create`,
+      `https://keep-mern-sq52.vercel.app/api/note/create`,
       newNote
     );
     return response;
@@ -15,7 +15,7 @@ export const createNote = async (newNote) => {
 
 export const readAllNotes = async () => {
   try {
-    const response = await axios.get(`http://localhost:5000/api/note/read/all`);
+    const response = await axios.get(`https://keep-mern-sq52.vercel.app/api/note/read/all`);
     return response;
   } catch (error) {
     console.error(error);
@@ -26,7 +26,7 @@ export const readAllNotes = async () => {
 export const deleteNote = async (noteId) => {
   try {
     const response = await axios.delete(
-      `http://localhost:5000/api/note/delete/${noteId}`
+      `https://keep-mern-sq52.vercel.app/api/note/delete/${noteId}`
     );
     return response;
   } catch (error) {
